@@ -1,0 +1,16 @@
+.a1,.a2,.a3{
+    width:100px;
+    height: 100px;
+}
+
+.a1{
+    background-color: red;
+}
+
+.a2{
+    background-color: green;
+}
+
+.a3{
+    background-color: blue;
+}

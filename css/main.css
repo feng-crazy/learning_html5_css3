@@ -1,0 +1,35 @@
+h1 {
+    font-size:18px;
+    font-weight: bold;
+    color:red;
+}
+
+h1 span{
+    font-size:32px;
+    font-weight:bolder;
+    color:green;
+}
+
+h1 div{
+    font-size:24px;
+    font-weight:initial;
+    color:blue;
+}
+
+/*h1>div{*/
+/*font-size:24px;*/
+/*font-weight:initial;*/
+/*color:blue;*/
+/*}*/
+
+h1 p{
+    font-size:24px;
+    font-weight:inherit;
+    color:burlywood;
+}
+
+.love{
+    font-size:48px;
+    font-weight:initial;
+    color:red;
+}

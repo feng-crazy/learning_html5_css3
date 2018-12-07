@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+    var context="全局";
+    var testObj={
+        context:"初始",
+        callback:function (str){
+            //回调函数 
+            console.log("callback:我所处的上下文中，this.context:", this.context+"，我被回调的方式："+str);
+        }
+    };
+    //创建一个对象，作为测试回调函数的上下文 
+    testObj.context="已设置";
+    function testCall(){
+        callMethod(testObj.callback);
+        callObjMethod(testObj,testObj.callback);
+    }
+    function callMethod(method){
+        console.log("通过默认上下文回调 this:", this.context)
+        method("通过默认上下文回调");
+    }
+    function callObjMethod(obj,method){
+        console.log("指定显式对象上下文回调 this:", this.context)
+        method.call(obj,"指定显式对象上下文回调");
+    }
+    function testCall2(){
+        console.log("testCall2 直接执行 this:", this.context)
+        testObj.callback('testCall2 直接执行');
+    }
+    </script>
+</head>
+<body>
+    <a href="javascript:void(0)" onclick="testCall()">调用测试</a>
+    <a href="javascript:void(0)" onclick="testCall2()">调用测试1</a>
+</body>
+</html>
